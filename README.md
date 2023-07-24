@@ -54,7 +54,7 @@
 ## **Inicialización:**
 
 1. Primero debes encontrarte en la carpeta del proyecto luego de clonar el repositorio, puedes utilizar el siguiente link:
-[https://github.com/DatBrian/EventFlow.git](https://github.com/DatBrian/EventFlow.git).
+[https://github.com/DatBrian/bibliotecaCampus.git](https://github.com/DatBrian/bibliotecaCampus.git).
 
 2. Al tener el proyecto en tu equipo abrelo, entra a la carpeta raíz desde la terminal y ejecuta el siguiente comando para instalar todas las dependencias:
 
