@@ -13,7 +13,7 @@ class EditorialRoutes extends RouterCommon<EditorialController, ValidateMiddlewa
 
     constructor() {
         super(EditorialController, ValidateMiddlewareDTO);
-        this.path = '/Editorial';
+        this.path = '/editorial';
         this.router = Router();
         this.controller = editorialController;
         this.initRoutes();
