@@ -1,10 +1,12 @@
 import App from './app';
 import { autorRoutes } from './routes/AutorRoutes';
 import { categoriaRoutes } from './routes/CategoriaRoutes';
+import { editorialRoutes } from './routes/EditorialRoutes';
 
 const app = new App([
     autorRoutes,
-    categoriaRoutes
+    categoriaRoutes,
+    editorialRoutes
 ]);
 
 app.listen();
