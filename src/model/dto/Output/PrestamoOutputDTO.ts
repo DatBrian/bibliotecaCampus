@@ -4,11 +4,11 @@ class PrestamoOutputDTO {
     @Expose({ name: "id_prestamo" })
     public idPrestamo: number;
 
-    @Expose({ name: "id_usuario" })
-    public usuario: number;
+    @Expose({ name: "usuario" })
+    public usuario: string;
 
-    @Expose({ name: "id_libro" })
-    public libro: number;
+    @Expose({ name: "libro" })
+    public libro: string;
 
     @Expose({ name: "fecha_prestamo" })
     public datePrestamo: string;
@@ -21,15 +21,15 @@ class PrestamoOutputDTO {
 
     constructor(
         id_prestamo: number,
-        id_usuario: number,
-        id_libro: number,
+        usuario: string,
+        libro: string,
         fecha_prestamo: string,
         fecha_devolucion: string,
         estado: string,
     ) {
         this.idPrestamo = id_prestamo;
-        this.usuario = id_usuario;
-        this.libro = id_libro;
+        this.usuario = usuario;
+        this.libro = libro;
         this.datePrestamo = fecha_prestamo;
         this.dateDevolucion = fecha_devolucion;
         this.state = estado;
