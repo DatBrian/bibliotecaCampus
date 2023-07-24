@@ -108,7 +108,7 @@ npm run start:dev
 ## Otros casos con este método:
 
 
-- ### ![Alt text](image.png) -> Este EndPoint se utiliza para obtener todos los libros disponibles
+- ### ![Alt text](./resources/screenshots/librosDisponibles.png) -> Este EndPoint se utiliza para obtener todos los libros disponibles
 
 ## DELETE
 
