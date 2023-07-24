@@ -13,7 +13,7 @@ class AutorRoutes extends RouterCommon<AutorController, ValidateMiddlewareDTO>{
 
     constructor() {
         super(AutorController, ValidateMiddlewareDTO);
-        this.path = '/Autor';
+        this.path = '/autor';
         this.router = Router();
         this.controller = autorController;
         this.initRoutes();
