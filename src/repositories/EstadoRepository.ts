@@ -25,8 +25,8 @@ class EstadoRepository extends QueriesCommon<EstadoInputDTO, EstadoOutputDTO>{
         try {
             return await this.getAll(queryParams);
         } catch (error) {
-            console.error("Error al obtener las categorías:", error);
-            throw new Error("Error al obtener las categorías");
+            console.error("Error al obtener los estados:", error);
+            throw new Error("Error al obtener los estados");
         }
     }
 
@@ -38,8 +38,8 @@ class EstadoRepository extends QueriesCommon<EstadoInputDTO, EstadoOutputDTO>{
         try {
             return await this.getOneById(id, queryParams);
         } catch (error) {
-            console.error("Error al obtener las categorías:", error);
-            throw new Error("Error al obtener las categorías");
+            console.error("Error al obtener los estados:", error);
+            throw new Error("Error al obtener los estados");
         }
     }
 
@@ -50,8 +50,8 @@ class EstadoRepository extends QueriesCommon<EstadoInputDTO, EstadoOutputDTO>{
     //     try {
     //         return await this.insert(body, queryParams);
     //     } catch (error) {
-    //         console.error("Error al insertar la categoría:", error);
-    //         throw new Error("Error al insertar la categoría");
+    //         console.error("Error al insertar el estado:", error);
+    //         throw new Error("Error al insertar el estado");
     //     }
     // }
 
@@ -63,8 +63,8 @@ class EstadoRepository extends QueriesCommon<EstadoInputDTO, EstadoOutputDTO>{
     //     try {
     //         return await this.put(id, body, queryParams);
     //     } catch (error) {
-    //         console.error("Error al actualizar la categoría:", error);
-    //         throw new Error("Error al actualizar la categoría");
+    //         console.error("Error al actualizar el estado:", error);
+    //         throw new Error("Error al actualizar el estado");
     //     }
     // }
 
@@ -76,8 +76,8 @@ class EstadoRepository extends QueriesCommon<EstadoInputDTO, EstadoOutputDTO>{
         try {
             return await this.delete(queryParams);
         } catch (error) {
-            console.error("Error al eliminar la categoría:", error);
-            throw new Error("Error al eliminar la categoría");
+            console.error("Error al eliminar el estado:", error);
+            throw new Error("Error al eliminar el estado");
         }
     }
 }

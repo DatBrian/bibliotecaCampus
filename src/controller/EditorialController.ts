@@ -14,8 +14,8 @@ export class EditorialController {
             const Editorials = await this.service.getAllEditorials();
             res.json(Editorials);
         } catch (error) {
-            console.error('Error al obtener las categorías:', error);
-            res.status(500).json({ error: 'Ocurrió un error al obtener las categorías, revise la consola para más información' });
+            console.error('Error al obtener las editoriales:', error);
+            res.status(500).json({ error: 'Ocurrió un error al obtener las editoriales, revise la consola para más información' });
 
         }
     }
@@ -27,8 +27,8 @@ export class EditorialController {
             res.clearCookie(this.cookie);
             res.json(Editorial);
         } catch (error) {
-            console.error('Error al obtener la categoría:', error);
-            res.status(500).json({ error: 'Ocurrió un error al obtener la categoría, revise la consola para más información' });
+            console.error('Error al obtener la editorial:', error);
+            res.status(500).json({ error: 'Ocurrió un error al obtener la editorial, revise la consola para más información' });
         }
     }
 
@@ -39,8 +39,8 @@ export class EditorialController {
     //         res.clearCookie(this.cookie);
     //         res.json(newEditorial);
     //     } catch (error) {
-    //         console.error('Error al insertar la categoría:', error);
-    //         res.status(500).json({ error: 'Ocurrió un error al insertar la categoría, revise la consola para más información' });
+    //         console.error('Error al insertar la editorial:', error);
+    //         res.status(500).json({ error: 'Ocurrió un error al insertar la editorial, revise la consola para más información' });
     //     }
     // }
 
@@ -51,8 +51,8 @@ export class EditorialController {
     //         res.clearCookie(this.cookie);
     //         res.json(updated)
     //     } catch (error) {
-    //         console.error('Error al actualizar la categoría:', error);
-    //         res.status(500).json({ error: 'Ocurrió un error al actualizar la categoría, revise la consola para más información' });
+    //         console.error('Error al actualizar la editorial:', error);
+    //         res.status(500).json({ error: 'Ocurrió un error al actualizar la editorial, revise la consola para más información' });
     //     }
     // }
 
@@ -63,8 +63,8 @@ export class EditorialController {
             res.clearCookie(this.cookie)
             res.json(deleted)
         } catch (error) {
-            console.error('Error al eliminar la categoría:', error);
-            res.status(500).json({ error: 'Ocurrió un error al eliminar la categoría, revise la consola para más información' });
+            console.error('Error al eliminar la editorial:', error);
+            res.status(500).json({ error: 'Ocurrió un error al eliminar la editorial, revise la consola para más información' });
         }
     }
 }

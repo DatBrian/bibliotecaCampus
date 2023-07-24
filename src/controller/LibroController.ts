@@ -14,8 +14,8 @@ export class LibroController {
             const Libros = await this.service.getAllLibros();
             res.json(Libros);
         } catch (error) {
-            console.error('Error al obtener las categorías:', error);
-            res.status(500).json({ error: 'Ocurrió un error al obtener las categorías, revise la consola para más información' });
+            console.error('Error al obtener los libros:', error);
+            res.status(500).json({ error: 'Ocurrió un error al obtener los libros, revise la consola para más información' });
 
         }
     }

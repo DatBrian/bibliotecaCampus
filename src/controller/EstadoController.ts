@@ -14,8 +14,8 @@ export class EstadoController {
             const Estados = await this.service.getAllEstados();
             res.json(Estados);
         } catch (error) {
-            console.error('Error al obtener las categorías:', error);
-            res.status(500).json({ error: 'Ocurrió un error al obtener las categorías, revise la consola para más información' });
+            console.error('Error al obtener los estados:', error);
+            res.status(500).json({ error: 'Ocurrió un error al obtener los estados, revise la consola para más información' });
 
         }
     }
@@ -27,8 +27,8 @@ export class EstadoController {
             res.clearCookie(this.cookie);
             res.json(Estado);
         } catch (error) {
-            console.error('Error al obtener la categoría:', error);
-            res.status(500).json({ error: 'Ocurrió un error al obtener la categoría, revise la consola para más información' });
+            console.error('Error al obtener el estado:', error);
+            res.status(500).json({ error: 'Ocurrió un error al obtener el estado, revise la consola para más información' });
         }
     }
 
@@ -39,8 +39,8 @@ export class EstadoController {
     //         res.clearCookie(this.cookie);
     //         res.json(newEstado);
     //     } catch (error) {
-    //         console.error('Error al insertar la categoría:', error);
-    //         res.status(500).json({ error: 'Ocurrió un error al insertar la categoría, revise la consola para más información' });
+    //         console.error('Error al insertar el estado:', error);
+    //         res.status(500).json({ error: 'Ocurrió un error al insertar el estado, revise la consola para más información' });
     //     }
     // }
 
@@ -51,8 +51,8 @@ export class EstadoController {
     //         res.clearCookie(this.cookie);
     //         res.json(updated)
     //     } catch (error) {
-    //         console.error('Error al actualizar la categoría:', error);
-    //         res.status(500).json({ error: 'Ocurrió un error al actualizar la categoría, revise la consola para más información' });
+    //         console.error('Error al actualizar el estado:', error);
+    //         res.status(500).json({ error: 'Ocurrió un error al actualizar el estado, revise la consola para más información' });
     //     }
     // }
 
@@ -63,8 +63,8 @@ export class EstadoController {
             res.clearCookie(this.cookie)
             res.json(deleted)
         } catch (error) {
-            console.error('Error al eliminar la categoría:', error);
-            res.status(500).json({ error: 'Ocurrió un error al eliminar la categoría, revise la consola para más información' });
+            console.error('Error al eliminar el estado:', error);
+            res.status(500).json({ error: 'Ocurrió un error al eliminar el estado, revise la consola para más información' });
         }
     }
 }

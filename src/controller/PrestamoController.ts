@@ -14,8 +14,8 @@ export class PrestamoController {
             const Prestamos = await this.service.getAllPrestamos();
             res.json(Prestamos);
         } catch (error) {
-            console.error('Error al obtener las categorías:', error);
-            res.status(500).json({ error: 'Ocurrió un error al obtener las categorías, revise la consola para más información' });
+            console.error('Error al obtener los prestamos:', error);
+            res.status(500).json({ error: 'Ocurrió un error al obtener los prestamos, revise la consola para más información' });
 
         }
     }
@@ -27,8 +27,8 @@ export class PrestamoController {
             res.clearCookie(this.cookie);
             res.json(Prestamo);
         } catch (error) {
-            console.error('Error al obtener la categoría:', error);
-            res.status(500).json({ error: 'Ocurrió un error al obtener la categoría, revise la consola para más información' });
+            console.error('Error al obtener el préstamo:', error);
+            res.status(500).json({ error: 'Ocurrió un error al obtener el préstamo, revise la consola para más información' });
         }
     }
 
@@ -39,8 +39,8 @@ export class PrestamoController {
     //         res.clearCookie(this.cookie);
     //         res.json(newPrestamo);
     //     } catch (error) {
-    //         console.error('Error al insertar la categoría:', error);
-    //         res.status(500).json({ error: 'Ocurrió un error al insertar la categoría, revise la consola para más información' });
+    //         console.error('Error al insertar el préstamo:', error);
+    //         res.status(500).json({ error: 'Ocurrió un error al insertar el préstamo, revise la consola para más información' });
     //     }
     // }
 
@@ -51,8 +51,8 @@ export class PrestamoController {
     //         res.clearCookie(this.cookie);
     //         res.json(updated)
     //     } catch (error) {
-    //         console.error('Error al actualizar la categoría:', error);
-    //         res.status(500).json({ error: 'Ocurrió un error al actualizar la categoría, revise la consola para más información' });
+    //         console.error('Error al actualizar el préstamo:', error);
+    //         res.status(500).json({ error: 'Ocurrió un error al actualizar el préstamo, revise la consola para más información' });
     //     }
     // }
 
@@ -63,8 +63,8 @@ export class PrestamoController {
             res.clearCookie(this.cookie)
             res.json(deleted)
         } catch (error) {
-            console.error('Error al eliminar la categoría:', error);
-            res.status(500).json({ error: 'Ocurrió un error al eliminar la categoría, revise la consola para más información' });
+            console.error('Error al eliminar el préstamo:', error);
+            res.status(500).json({ error: 'Ocurrió un error al eliminar el préstamo, revise la consola para más información' });
         }
     }
 }

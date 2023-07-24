@@ -14,8 +14,8 @@ export class AutorController {
             const Autors = await this.service.getAllAutors();
             res.json(Autors);
         } catch (error) {
-            console.error('Error al obtener las categorías:', error);
-            res.status(500).json({ error: 'Ocurrió un error al obtener las categorías, revise la consola para más información' });
+            console.error('Error al obtener los autores:', error);
+            res.status(500).json({ error: 'Ocurrió un error al obtener los autores, revise la consola para más información' });
 
         }
     }
@@ -27,8 +27,8 @@ export class AutorController {
             res.clearCookie(this.cookie);
             res.json(Autor);
         } catch (error) {
-            console.error('Error al obtener la categoría:', error);
-            res.status(500).json({ error: 'Ocurrió un error al obtener la categoría, revise la consola para más información' });
+            console.error('Error al obtener el autor:', error);
+            res.status(500).json({ error: 'Ocurrió un error al obtener el autor, revise la consola para más información' });
         }
     }
 
@@ -39,8 +39,8 @@ export class AutorController {
     //         res.clearCookie(this.cookie);
     //         res.json(newAutor);
     //     } catch (error) {
-    //         console.error('Error al insertar la categoría:', error);
-    //         res.status(500).json({ error: 'Ocurrió un error al insertar la categoría, revise la consola para más información' });
+    //         console.error('Error al insertar el autor:', error);
+    //         res.status(500).json({ error: 'Ocurrió un error al insertar el autor, revise la consola para más información' });
     //     }
     // }
 
@@ -51,8 +51,8 @@ export class AutorController {
     //         res.clearCookie(this.cookie);
     //         res.json(updated)
     //     } catch (error) {
-    //         console.error('Error al actualizar la categoría:', error);
-    //         res.status(500).json({ error: 'Ocurrió un error al actualizar la categoría, revise la consola para más información' });
+    //         console.error('Error al actualizar el autor:', error);
+    //         res.status(500).json({ error: 'Ocurrió un error al actualizar el autor, revise la consola para más información' });
     //     }
     // }
 
@@ -63,8 +63,8 @@ export class AutorController {
             res.clearCookie(this.cookie)
             res.json(deleted)
         } catch (error) {
-            console.error('Error al eliminar la categoría:', error);
-            res.status(500).json({ error: 'Ocurrió un error al eliminar la categoría, revise la consola para más información' });
+            console.error('Error al eliminar el autor:', error);
+            res.status(500).json({ error: 'Ocurrió un error al eliminar el autor, revise la consola para más información' });
         }
     }
 }

@@ -29,8 +29,8 @@ class PrestamoRepository extends QueriesCommon<PrestamoInputDTO, PrestamoOutputD
         try {
             return await this.getAll(queryParams);
         } catch (error) {
-            console.error("Error al obtener las categorías:", error);
-            throw new Error("Error al obtener las categorías");
+            console.error("Error al obtener los prestamos:", error);
+            throw new Error("Error al obtener los prestamos");
         }
     }
 
@@ -46,8 +46,8 @@ class PrestamoRepository extends QueriesCommon<PrestamoInputDTO, PrestamoOutputD
         try {
             return await this.getOneById(id, queryParams);
         } catch (error) {
-            console.error("Error al obtener las categorías:", error);
-            throw new Error("Error al obtener las categorías");
+            console.error("Error al obtener los prestamos:", error);
+            throw new Error("Error al obtener los prestamos");
         }
     }
 
@@ -58,8 +58,8 @@ class PrestamoRepository extends QueriesCommon<PrestamoInputDTO, PrestamoOutputD
     //     try {
     //         return await this.insert(body, queryParams);
     //     } catch (error) {
-    //         console.error("Error al insertar la categoría:", error);
-    //         throw new Error("Error al insertar la categoría");
+    //         console.error("Error al insertar el préstamo:", error);
+    //         throw new Error("Error al insertar el préstamo");
     //     }
     // }
 
@@ -71,8 +71,8 @@ class PrestamoRepository extends QueriesCommon<PrestamoInputDTO, PrestamoOutputD
     //     try {
     //         return await this.put(id, body, queryParams);
     //     } catch (error) {
-    //         console.error("Error al actualizar la categoría:", error);
-    //         throw new Error("Error al actualizar la categoría");
+    //         console.error("Error al actualizar el préstamo:", error);
+    //         throw new Error("Error al actualizar el préstamo");
     //     }
     // }
 
@@ -84,8 +84,8 @@ class PrestamoRepository extends QueriesCommon<PrestamoInputDTO, PrestamoOutputD
         try {
             return await this.delete(queryParams);
         } catch (error) {
-            console.error("Error al eliminar la categoría:", error);
-            throw new Error("Error al eliminar la categoría");
+            console.error("Error al eliminar el préstamo:", error);
+            throw new Error("Error al eliminar el préstamo");
         }
     }
 }
