@@ -4,14 +4,14 @@ class LibroOutputDTO {
     @Expose({ name: "id_libro" })
     public idLibro: number;
 
-    @Expose({ name: "id_autor" })
-    public autor: number;
+    @Expose({ name: "autor" })
+    public autor: string;
 
-    @Expose({ name: "id_categoria" })
-    public categoria: number;
+    @Expose({ name: "categoria" })
+    public categoria: string;
 
-    @Expose({ name: "id_editorial" })
-    public editorial: number;
+    @Expose({ name: "editorial" })
+    public editorial: string;
 
     @Expose({ name: "titulo" })
     public title: string;
@@ -30,9 +30,9 @@ class LibroOutputDTO {
 
     constructor(
         id_libro: number,
-        id_autor: number,
-        id_categoria: number,
-        id_editorial: number,
+        autor: string,
+        categoria: string,
+        editorial: string,
         titulo: string,
         anio_publicacion: number,
         isbn: string,
@@ -40,9 +40,9 @@ class LibroOutputDTO {
         id_estado: number
     ) {
         this.idLibro = id_libro;
-        this.autor = id_autor;
-        this.categoria = id_categoria;
-        this.editorial = id_editorial;
+        this.autor = autor;
+        this.categoria = categoria;
+        this.editorial = editorial;
         this.title = titulo;
         this.publicacion = anio_publicacion;
         this.isbn = isbn;
