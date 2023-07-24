@@ -5,6 +5,7 @@ import { editorialRoutes } from './routes/EditorialRoutes';
 import { estadoRoutes } from './routes/EstadoRoutes';
 import { libroRoutes } from './routes/LibroRoutes';
 import { prestamoRoutes } from './routes/PrestamoRoutes';
+import { reservaRoutes } from './routes/ReservaRoutes';
 
 const app = new App([
     autorRoutes,
@@ -12,7 +13,8 @@ const app = new App([
     editorialRoutes,
     estadoRoutes,
     libroRoutes,
-    prestamoRoutes
+    prestamoRoutes,
+    reservaRoutes
 ]);
 
 app.listen();
