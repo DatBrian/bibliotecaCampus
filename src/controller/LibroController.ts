@@ -27,8 +27,8 @@ export class LibroController {
             res.clearCookie(this.cookie);
             res.json(Libro);
         } catch (error) {
-            console.error('Error al obtener la categoría:', error);
-            res.status(500).json({ error: 'Ocurrió un error al obtener la categoría, revise la consola para más información' });
+            console.error('Error al obtener el libro:', error);
+            res.status(500).json({ error: 'Ocurrió un error al obtener el libro, revise la consola para más información' });
         }
     }
 
@@ -39,8 +39,8 @@ export class LibroController {
     //         res.clearCookie(this.cookie);
     //         res.json(newLibro);
     //     } catch (error) {
-    //         console.error('Error al insertar la categoría:', error);
-    //         res.status(500).json({ error: 'Ocurrió un error al insertar la categoría, revise la consola para más información' });
+    //         console.error('Error al insertar el libro:', error);
+    //         res.status(500).json({ error: 'Ocurrió un error al insertar el libro, revise la consola para más información' });
     //     }
     // }
 
@@ -51,8 +51,8 @@ export class LibroController {
     //         res.clearCookie(this.cookie);
     //         res.json(updated)
     //     } catch (error) {
-    //         console.error('Error al actualizar la categoría:', error);
-    //         res.status(500).json({ error: 'Ocurrió un error al actualizar la categoría, revise la consola para más información' });
+    //         console.error('Error al actualizar el libro:', error);
+    //         res.status(500).json({ error: 'Ocurrió un error al actualizar el libro, revise la consola para más información' });
     //     }
     // }
 
@@ -63,8 +63,18 @@ export class LibroController {
             res.clearCookie(this.cookie)
             res.json(deleted)
         } catch (error) {
-            console.error('Error al eliminar la categoría:', error);
-            res.status(500).json({ error: 'Ocurrió un error al eliminar la categoría, revise la consola para más información' });
+            console.error('Error al eliminar el libro:', error);
+            res.status(500).json({ error: 'Ocurrió un error al eliminar el libro, revise la consola para más información' });
+        }
+    }
+
+    public getLibrosDisponibles = async (_req: Request, res: Response) => {
+        try {
+            const libros = await this.service.getLibrosDisponibles();
+            res.json(libros);
+        } catch (error) {
+            console.error('Error al obtener los libros disponibles:', error);
+            res.status(500).json({ error: 'Ocurrió un error al obtener los libros disponibles, revise la consola para más información' });
         }
     }
 }

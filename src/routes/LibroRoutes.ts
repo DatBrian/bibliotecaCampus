@@ -29,6 +29,7 @@ class LibroRoutes extends RouterCommon<LibroController, ValidateMiddlewareDTO>{
             (req, res) => {
                 this.controller.getLibroById(req, res);
             });
+        this.router.get(`${this.path}/disponibles`, this.controller.getLibrosDisponibles)
         // this.router.post(`${this.path}/create`,
         //     (req, res, next) => {
         //         ValidateMiddlewareDTO.validator(req, res, next, LibroInputDTO);

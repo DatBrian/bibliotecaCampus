@@ -58,6 +58,14 @@ class LibroServices {
         }
     }
 
+    public async getLibrosDisponibles(): Promise<LibroOutputDTO[]>{
+        try {
+            return await this.repository.getLibrosDisponibles();
+        } catch (error) {
+            throw error;
+        }
+    }
+
 }
 export default LibroServices;
 export const libroService = new LibroServices();

@@ -25,8 +25,8 @@ class LibroOutputDTO {
     @Expose({ name: "num_paginas" })
     public paginas: number;
 
-    @Expose({ name: "id_estado" })
-    public estado: number;
+    @Expose({ name: "estado" })
+    public estado: string;
 
     constructor(
         id_libro: number,
@@ -37,7 +37,7 @@ class LibroOutputDTO {
         anio_publicacion: number,
         isbn: string,
         num_paginas: number,
-        id_estado: number
+        estado: string
     ) {
         this.idLibro = id_libro;
         this.autor = autor;
@@ -47,7 +47,7 @@ class LibroOutputDTO {
         this.publicacion = anio_publicacion;
         this.isbn = isbn;
         this.paginas = num_paginas;
-        this.estado = id_estado;
+        this.estado = estado;
     }
 }
 export default LibroOutputDTO;

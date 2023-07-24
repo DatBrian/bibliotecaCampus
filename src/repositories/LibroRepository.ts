@@ -20,34 +20,36 @@ class LibroRepository extends QueriesCommon<LibroInputDTO, LibroOutputDTO>{
 
     public async getAllLibros(): Promise<LibroOutputDTO[]> {
         const queryParams = {
-            select: `${this.table}.*, autor.nombre AS autor, categoria.nombre AS categoria, editorial.nombre AS editorial`,
+            select: `${this.table}.*, autor.nombre AS autor, categoria.nombre AS categoria, editorial.nombre AS editorial, estado.nombre AS estado`,
             table: this.table,
             joins: `JOIN autor ON autor.id_autor = ${this.table}.id_autor
                     JOIN categoria ON categoria.id_categoria = ${this.table}.id_categoria
-                    JOIN editorial ON editorial.id_editorial = ${this.table}.id_editorial`
+                    JOIN editorial ON editorial.id_editorial = ${this.table}.id_editorial
+                    JOIN estado_libro AS estado ON estado.id_estado = ${this.table}.id_estado`
         };
         try {
             return await this.getAll(queryParams);
         } catch (error) {
-            console.error("Error al obtener las categorías:", error);
-            throw new Error("Error al obtener las categorías");
+            console.error("Error al obtener los libros:", error);
+            throw new Error("Error al obtener los libros");
         }
     }
 
     public async getLibroById(id: any): Promise<LibroOutputDTO | null> {
         const queryParams = {
-            select: `${this.table}.*, autor.nombre AS autor, categoria.nombre AS categoria, editorial.nombre AS editorial`,
+            select: `${this.table}.*, autor.nombre AS autor, categoria.nombre AS categoria, editorial.nombre AS editorial, estado.nombre AS estado`,
             table: this.table,
             joins: `JOIN autor ON autor.id_autor = ${this.table}.id_autor
                     JOIN categoria ON categoria.id_categoria = ${this.table}.id_categoria
-                    JOIN editorial ON editorial.id_editorial = ${this.table}.id_editorial`,
+                    JOIN editorial ON editorial.id_editorial = ${this.table}.id_editorial
+                    JOIN estado_libro AS estado ON estado.id_estado = ${this.table}.id_estado`,
             where: id.toString()
         };
         try {
             return await this.getOneById(id, queryParams);
         } catch (error) {
-            console.error("Error al obtener las categorías:", error);
-            throw new Error("Error al obtener las categorías");
+            console.error("Error al obtener los libros:", error);
+            throw new Error("Error al obtener los libros");
         }
     }
 
@@ -58,8 +60,8 @@ class LibroRepository extends QueriesCommon<LibroInputDTO, LibroOutputDTO>{
     //     try {
     //         return await this.insert(body, queryParams);
     //     } catch (error) {
-    //         console.error("Error al insertar la categoría:", error);
-    //         throw new Error("Error al insertar la categoría");
+    //         console.error("Error al insertar el libro:", error);
+    //         throw new Error("Error al insertar el libro");
     //     }
     // }
 
@@ -71,8 +73,8 @@ class LibroRepository extends QueriesCommon<LibroInputDTO, LibroOutputDTO>{
     //     try {
     //         return await this.put(id, body, queryParams);
     //     } catch (error) {
-    //         console.error("Error al actualizar la categoría:", error);
-    //         throw new Error("Error al actualizar la categoría");
+    //         console.error("Error al actualizar el libro:", error);
+    //         throw new Error("Error al actualizar el libro");
     //     }
     // }
 
@@ -84,8 +86,26 @@ class LibroRepository extends QueriesCommon<LibroInputDTO, LibroOutputDTO>{
         try {
             return await this.delete(queryParams);
         } catch (error) {
-            console.error("Error al eliminar la categoría:", error);
-            throw new Error("Error al eliminar la categoría");
+            console.error("Error al eliminar el libro:", error);
+            throw new Error("Error al eliminar el libro");
+        }
+    }
+
+    public async getLibrosDisponibles(): Promise<LibroOutputDTO[]> {
+        const queryParams = {
+            select: `${this.table}.*, autor.nombre AS autor, categoria.nombre AS categoria, editorial.nombre AS editorial, estado.nombre AS estado`,
+            table: this.table,
+            joins: `JOIN autor ON autor.id_autor = ${this.table}.id_autor
+                    JOIN categoria ON categoria.id_categoria = ${this.table}.id_categoria
+                    JOIN editorial ON editorial.id_editorial = ${this.table}.id_editorial
+                    JOIN estado_libro AS estado ON estado.id_estado = ${this.table}.id_estado`,
+            where: `WHERE estado.nombre = 'Disponible'`
+        };
+        try {
+            return await this.getAll(queryParams);
+        } catch (error) {
+            console.error("Error al obtener los libros disponibles:", error);
+            throw new Error("Error al obtener los libros disponibles");
         }
     }
 }
