@@ -36,7 +36,7 @@ abstract class QueriesCommon<InputDTO extends DTO, OutputDTO extends DTO> extend
         SELECT ${queryParams.select ?? "*"}
         FROM ${queryParams.table}
         ${queryParams.joins ?? ""}
-        WHERE ${queryParams.table}.id = ${queryParams.where ?? ""}
+        WHERE ${queryParams.table}.id_${queryParams.table} = ${queryParams.where ?? ""}
         `;
 
         try {
